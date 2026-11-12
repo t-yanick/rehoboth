@@ -1,4 +1,44 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#destinations</h1>
-  <p>Find me in app/views/pages/destinations.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title"), intro: t(".intro") %>
+
+<section class="mx-auto max-w-6xl px-4 py-10">
+  <div class="grid gap-4 md:grid-cols-2">
+    <div class="rounded-xl bg-brand-sky/20 p-5">
+      <h2 class="text-lg font-bold text-brand-blue"><%= t(".from_title") %></h2>
+      <p class="mt-2 text-base text-slate-700"><%= t(".from_text") %></p>
+    </div>
+    <div class="rounded-xl bg-brand-sage/15 p-5">
+      <h2 class="text-lg font-bold text-brand-sage-dark"><%= t(".to_title") %></h2>
+      <p class="mt-2 text-base text-slate-700"><%= t(".to_text") %></p>
+    </div>
+  </div>
+
+  <h2 class="mt-10 text-2xl font-extrabold text-brand-ink"><%= t(".list_title") %></h2>
+
+  <%# Cards on phones, table look from md up %>
+  <ul class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
+    <li class="hidden grid-cols-4 gap-4 bg-slate-50 px-5 py-3 text-sm font-bold uppercase tracking-wide text-slate-500 md:grid">
+      <span><%= t(".col_country") %></span>
+      <span><%= t(".col_presence") %></span>
+      <span><%= t(".col_air") %></span>
+      <span><%= t(".col_sea") %></span>
+    </li>
+    <% site[:destinations].each do |d| %>
+      <li class="grid grid-cols-2 gap-x-4 gap-y-1 px-5 py-4 text-base md:grid-cols-4">
+        <span class="col-span-2 font-bold text-brand-ink md:col-span-1"><%= t("countries.#{d[:code]}") %></span>
+        <span class="text-slate-600"><%= t(".presence.#{d[:presence]}") %></span>
+        <span class="text-slate-600">
+          <span class="md:hidden"><%= t(".col_air") %>: </span><%= d[:air_days].present? ? t(".days", count: d[:air_days]) : t(".tbc") %>
+        </span>
+        <span class="col-start-2 text-slate-600 md:col-start-auto">
+          <span class="md:hidden"><%= t(".col_sea") %>: </span><%= d[:sea_weeks].present? ? t(".weeks", count: d[:sea_weeks]) : t(".tbc") %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+
+  <p class="mt-6 text-base text-slate-600"><%= t(".not_listed") %></p>
+</section>
+
+<%= render "shared/cta" %>

@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
-    <title><%= content_for(:title) || "Rehoboth" %></title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title><%= content_for?(:title) ? "#{yield(:title)} | Rehoboth Trans Asia Cargo" : "Rehoboth Trans Asia Cargo" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : t("meta.description") %>">
+    <meta name="theme-color" content="#1E5FA8">
     <meta name="application-name" content="Rehoboth">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <% unless site[:indexable] %>
+      <meta name="robots" content="noindex, nofollow">
+    <% end %>
+
+    <link rel="alternate" hreflang="en" href="<%= url_for(locale: :en, only_path: false) %>">
+    <link rel="alternate" hreflang="fr" href="<%= url_for(locale: :fr, only_path: false) %>">
+    <link rel="alternate" hreflang="x-default" href="<%= url_for(locale: :en, only_path: false) %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="min-h-screen flex flex-col bg-white text-brand-ink font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-brand-blue focus:px-4 focus:py-2 focus:text-white">
+      <%= t("nav.skip_to_content") %>
+    </a>
+
+    <%= render "layouts/header" %>
+
+    <main id="main" class="flex-1">
       <%= yield %>
     </main>
+
+    <%= render "layouts/footer" %>
+
+    <%# Floating WhatsApp button: phones and tablets only (desktop has it in the header) %>
+    <%= link_to whatsapp_url(:vietnam),
+          target: "_blank", rel: "noopener",
+          class: "xl:hidden fixed bottom-4 right-4 z-40 inline-flex min-h-12 items-center gap-2 rounded-full bg-brand-sage-dark px-5 text-base font-semibold text-white shadow-lg active:scale-95",
+          aria: { label: t("nav.chat_whatsapp") } do %>
+      <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+      <span><%= t("nav.whatsapp") %></span>
+    <% end %>
   </body>
 </html>

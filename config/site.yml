@@ -1,0 +1,31 @@
+shared:
+  indexable: false          # set to true only when the real contact details are in
+  email: "contact@example.com"
+  hours: "Mon–Sat, 8:00–18:00 (UTC+7)"
+  whatsapp:
+    vietnam:
+      display: "+84 000 000 000"
+      wa: "84000000000"
+    china:
+      display: "+86 000 000 000"
+      wa: "86000000000"
+  warehouses:
+    vietnam:
+      city: "Hanoi"
+      address: "Warehouse address to be confirmed, Hanoi, Vietnam"
+    china:
+      city: "Guangzhou"
+      address: "Warehouse address to be confirmed, Guangzhou, China"
+  # Destinations shown on the Destinations page.
+  # presence: office | agent · air_days / sea_weeks: leave empty until Collins confirms
+  destinations:
+    - { code: cm, presence: office, air_days: "", sea_weeks: "" }
+    - { code: ng, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: gh, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: ci, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: sn, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: ke, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: ao, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: gq, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: cd, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: cg, presence: agent,  air_days: "", sea_weeks: "" }

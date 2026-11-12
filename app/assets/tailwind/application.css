@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1E5FA8;
+  --color-brand-sky: #8FCBEF;
+  --color-brand-sage: #6E9E6B;
+  --color-brand-sage-dark: #4C8A4F;
+  --color-brand-ink: #1F2A37;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

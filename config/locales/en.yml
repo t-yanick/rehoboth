@@ -1,33 +1,216 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
+  meta:
+    description: "Rehoboth Trans Asia Cargo sources, stores and ships goods from Vietnam and China to 9 African countries, by air every week and by sea in shared or full containers."
+
+  nav:
+    home: "Home"
+    about: "About us"
+    services: "Services"
+    destinations: "Destinations"
+    how_it_works: "How it works"
+    faq: "FAQ"
+    contact: "Contact"
+    track: "Track"
+    menu: "Menu"
+    main_navigation: "Main navigation"
+    language: "Language"
+    whatsapp: "WhatsApp"
+    chat_whatsapp: "Chat with us on WhatsApp"
+    skip_to_content: "Skip to content"
+
+  footer:
+    tagline: "Our word is our bond"
+    about: "We source, store and ship your goods from Vietnam and China to Africa, by air and by sea, with customs clearance on arrival."
+    contact_heading: "Contact us"
+    links_heading: "Quick links"
+    vietnam: "Vietnam"
+    china: "China"
+    rights: "All rights reserved."
+
+  shared:
+    cta:
+      title: "Ready to ship your next order?"
+      text: "Send us a message on WhatsApp and get your client code today."
+
+  countries:
+    cm: "Cameroon"
+    ng: "Nigeria"
+    gh: "Ghana"
+    ci: "Ivory Coast"
+    sn: "Senegal"
+    ke: "Kenya"
+    ao: "Angola"
+    gq: "Equatorial Guinea"
+    cd: "Congo (Kinshasa)"
+    cg: "Congo (Brazzaville)"
+
   pages:
     home:
+      page_title: "Shipping from Asia to Africa"
       headline: "From Asia to Africa, delivered with your trust."
+      subheadline: "We source, store and ship your goods from Vietnam and China to 9 African countries, by air every week and by sea in full or shared containers."
+      track_button: "Track a shipment"
+      services_title: "Our services"
+      services:
+        sourcing: "We find and buy the products you need from trusted suppliers in Vietnam and China."
+        warehousing: "Your suppliers deliver to our warehouses in Hanoi and Guangzhou. We receive, check and store your goods free until they ship."
+        air: "Weekly departures for goods that cannot wait."
+        sea: "Shared containers (LCL) for smaller loads, full containers (FCL) for large ones."
+        customs: "We handle customs on arrival, so you collect without stress."
+      all_services: "See all services"
+      why_title: "Why Rehoboth"
+      why:
+        word:
+          title: "Our word is our bond"
+          text: "We tell you the real price and the real dates, and we keep them."
+        tracking:
+          title: "You always know where your goods are"
+          text: "One tracking code per shipment, and WhatsApp updates at every step."
+        pay_on_arrival:
+          title: "Pay when your goods arrive"
+          text: "Most clients pay on arrival, by mobile money, bank transfer or cash."
+        language:
+          title: "People who speak your language"
+          text: "English and French, with a team in Asia and an office in Cameroon."
+      how_title: "How it works"
+      how:
+        code: "Get your client code"
+        supplier: "Your supplier delivers to our warehouse"
+        ship: "We ship by air or sea"
+        track: "You track and collect"
+      how_link: "See how it works"
+
+    about:
+      page_title: "About us"
+      title: "About us"
+      lead: "Rehoboth Trans Asia Cargo connects African businesses to the factories and markets of Asia."
+      where: "We work from Hanoi and Guangzhou, close to the suppliers our clients buy from, and ship to Cameroon, Ghana, Ivory Coast, Nigeria, Senegal, Kenya, Angola, Equatorial Guinea and both Congos."
+      who: "Our clients are traders, shop owners and companies who need goods from Asia without the risk. We find the right products, receive them from your suppliers, check them, and ship them by air or sea. When they arrive, we clear customs and hand them over to you."
+      name_title: "Our name"
+      name_text: "Rehoboth means \"room\" or \"a broad place\": a place where there is space to grow. That is what we want for our clients' businesses."
+      promise_title: "Our promise: our word is our bond"
+      promise_text: "We quote honestly, we update you at every step, and we keep our dates."
+
+    services:
+      page_title: "Services"
+      title: "Our services"
+      intro: "From finding a supplier to handing over your goods in Africa, we take care of every step."
+      sourcing:
+        title: "Sourcing"
+        text: "Tell us what you need: a photo, a link or a description, the quantity and your budget. We find suppliers in Vietnam and China, compare prices, check samples and buy on your behalf. Your goods then go straight to our warehouse for shipping."
+      warehousing:
+        title: "Warehousing"
+        text: "Give your supplier your client code and our warehouse address in Hanoi or Guangzhou. When your goods arrive, we weigh and measure them, take photos and send you a WhatsApp message. Storage in our Asian warehouses is free until your goods ship."
+      air:
+        title: "Air freight"
+        text: "Air shipments leave every week. Choose air for urgent, valuable or light goods such as phones, accessories, clothing, cosmetics and spare parts. Priced per kilogram."
+      sea:
+        title: "Sea freight"
+        text: "The economical choice for larger and heavier goods."
+        lcl_title: "Shared container (LCL)"
+        lcl_text: "you pay only for the space your goods take, per cubic metre (CBM). We group goods from many clients and ship when the container is full."
+        fcl_title: "Full container (FCL)"
+        fcl_text: "a container for your goods only."
+      customs:
+        title: "Customs clearance"
+        text: "We handle customs formalities in the destination country, so your goods are ready for collection without you dealing with paperwork."
+      collection:
+        title: "Collection and storage at destination"
+        text: "When your goods are ready, we tell you on WhatsApp. Storage at our destination points is free for 1 month after arrival; after that, storage charges apply."
+
+    destinations:
+      page_title: "Destinations"
+      title: "Routes and destinations"
+      intro: "We ship from two hubs in Asia to 10 destinations in 9 African countries."
+      from_title: "From Asia"
+      from_text: "Hanoi (Vietnam) and Guangzhou (China). More origins coming soon: India, Singapore, Japan, Thailand and Bangladesh."
+      to_title: "To Africa"
+      to_text: "10 destinations in 9 countries across West, Central and East Africa."
+      list_title: "Where we deliver"
+      col_country: "Country"
+      col_presence: "Our presence"
+      col_air: "By air"
+      col_sea: "By sea"
+      presence:
+        office: "Rehoboth office"
+        agent: "Partner agent"
+      days: "%{count} days"
+      weeks: "%{count} weeks"
+      tbc: "To be confirmed"
+      not_listed: "Don't see your country? Message us on WhatsApp. We may already ship there through a partner."
+
+    how_it_works:
+      page_title: "How it works"
+      title: "How it works"
+      intro: "Six simple steps from your supplier in Asia to your hands in Africa."
+      steps:
+        code:
+          title: "Get your client code"
+          text: "Send your name, phone number and country on WhatsApp. We reply with your personal client code and our warehouse address."
+        supplier:
+          title: "Your supplier delivers to our warehouse"
+          text: "Give your supplier the address and ask them to write your client code on every package."
+        receive:
+          title: "We receive and check your goods"
+          text: "We weigh, measure and photograph them, then send you a WhatsApp message."
+        ship:
+          title: "We ship"
+          text: "Your goods leave on the next weekly flight, or in the next sea container. You receive one tracking code for the shipment."
+        track:
+          title: "Track every step"
+          text: "Follow our WhatsApp updates: departed, in transit, arrived, customs cleared, ready for collection."
+        pay:
+          title: "Pay and collect"
+          text: "Pay on arrival (or before shipping, if you prefer) by mobile money, bank transfer or cash, and collect your goods. Free storage for 1 month after arrival."
+
+    faq:
+      page_title: "FAQ"
+      title: "Frequently asked questions"
+      intro: "Can't find your answer? Message us on WhatsApp."
+      items:
+        client_code:
+          q: "How do I get a client code?"
+          a: "Send us your name, phone number and country on WhatsApp. We reply with your code, usually the same day."
+        cost:
+          q: "How much does shipping cost?"
+          a: "Air freight is priced per kilogram and sea freight per cubic metre (CBM), depending on the destination. Send us the weight or size of your goods on WhatsApp for a quote."
+        duration:
+          q: "How long does shipping take?"
+          a: "It depends on the destination and on air or sea. See the Destinations page, or ask us on WhatsApp."
+        payment:
+          q: "When do I pay?"
+          a: "Most clients pay when their goods arrive. You can also pay before shipping. We accept mobile money, bank transfer and cash at our office."
+        tracking:
+          q: "How do I track my goods?"
+          a: "When your goods ship, you receive a tracking code, and we send you a WhatsApp update at each step."
+        combine:
+          q: "Can I combine goods from several suppliers?"
+          a: "Yes. All your packages wait in our warehouse, free of charge, and ship together."
+        customs:
+          q: "Do you handle customs?"
+          a: "Yes, we clear your goods through customs in the destination country."
+        restricted:
+          q: "What can't I ship?"
+          a: "Some goods are restricted, for example batteries by air, liquids, flammable goods and counterfeit products. Message us on WhatsApp before buying if you are not sure."
+        storage:
+          q: "How long can my goods stay at the destination?"
+          a: "1 month free after arrival. After that, storage charges apply."
+        damage:
+          q: "What if my goods are damaged or lost?"
+          a: "Every package is checked and photographed when it reaches our warehouse. If there is a problem, message us on WhatsApp with your client code straight away."
+
+    contact:
+      page_title: "Contact"
+      title: "Talk to us"
+      intro: "The fastest way to reach us is WhatsApp. Choose the warehouse your goods ship from."
+      offices:
+        vietnam: "Vietnam (Hanoi)"
+        china: "China (Guangzhou)"
+      email: "Email"
+      hours: "Opening hours"
+
+    track:
+      page_title: "Track your shipment"
+      title: "Track your shipment"
+      coming_soon_badge: "Coming in February 2027"
+      coming_soon_text: "Online tracking is coming soon. For now, send your client code on WhatsApp and we'll tell you where your goods are."

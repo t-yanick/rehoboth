@@ -1,4 +1,216 @@
 fr:
+  meta:
+    description: "Rehoboth Trans Asia Cargo achète, stocke et expédie vos marchandises du Vietnam et de la Chine vers 9 pays africains, par avion chaque semaine et par bateau en conteneur groupé ou complet."
+
+  nav:
+    home: "Accueil"
+    about: "À propos"
+    services: "Services"
+    destinations: "Destinations"
+    how_it_works: "Comment ça marche"
+    faq: "FAQ"
+    contact: "Contact"
+    track: "Suivi"
+    menu: "Menu"
+    main_navigation: "Navigation principale"
+    language: "Langue"
+    whatsapp: "WhatsApp"
+    chat_whatsapp: "Écrivez-nous sur WhatsApp"
+    skip_to_content: "Aller au contenu"
+
+  footer:
+    tagline: "Notre parole est notre engagement"
+    about: "Nous achetons, stockons et expédions vos marchandises du Vietnam et de la Chine vers l'Afrique, par avion et par bateau, avec dédouanement à l'arrivée."
+    contact_heading: "Contactez-nous"
+    links_heading: "Liens rapides"
+    vietnam: "Vietnam"
+    china: "Chine"
+    rights: "Tous droits réservés."
+
+  shared:
+    cta:
+      title: "Prêt à expédier votre prochaine commande ?"
+      text: "Écrivez-nous sur WhatsApp et obtenez votre code client dès aujourd'hui."
+
+  countries:
+    cm: "Cameroun"
+    ng: "Nigeria"
+    gh: "Ghana"
+    ci: "Côte d'Ivoire"
+    sn: "Sénégal"
+    ke: "Kenya"
+    ao: "Angola"
+    gq: "Guinée équatoriale"
+    cd: "Congo (Kinshasa)"
+    cg: "Congo (Brazzaville)"
+
   pages:
     home:
+      page_title: "Expédition de l'Asie vers l'Afrique"
       headline: "De l'Asie à l'Afrique, livré avec votre confiance."
+      subheadline: "Nous achetons, stockons et expédions vos marchandises du Vietnam et de la Chine vers 9 pays africains, par avion chaque semaine et par bateau en conteneur complet ou groupé."
+      track_button: "Suivre un envoi"
+      services_title: "Nos services"
+      services:
+        sourcing: "Nous trouvons et achetons les produits dont vous avez besoin auprès de fournisseurs fiables au Vietnam et en Chine."
+        warehousing: "Vos fournisseurs livrent à nos entrepôts de Hanoï et de Guangzhou. Nous recevons, vérifions et stockons gratuitement vos marchandises jusqu'à l'expédition."
+        air: "Des départs chaque semaine pour les marchandises urgentes."
+        sea: "Conteneurs groupés (LCL) pour les petits volumes, conteneurs complets (FCL) pour les gros volumes."
+        customs: "Nous gérons la douane à l'arrivée, vous récupérez vos marchandises sans stress."
+      all_services: "Voir tous les services"
+      why_title: "Pourquoi Rehoboth"
+      why:
+        word:
+          title: "Notre parole est notre engagement"
+          text: "Nous vous donnons le vrai prix et les vrais délais, et nous les respectons."
+        tracking:
+          title: "Vous savez toujours où sont vos marchandises"
+          text: "Un code de suivi par envoi et des messages WhatsApp à chaque étape."
+        pay_on_arrival:
+          title: "Payez à l'arrivée de vos marchandises"
+          text: "La plupart de nos clients paient à l'arrivée, par mobile money, virement bancaire ou en espèces."
+        language:
+          title: "Une équipe qui parle votre langue"
+          text: "Anglais et français, avec une équipe en Asie et un bureau au Cameroun."
+      how_title: "Comment ça marche"
+      how:
+        code: "Obtenez votre code client"
+        supplier: "Votre fournisseur livre à notre entrepôt"
+        ship: "Nous expédions par avion ou par bateau"
+        track: "Vous suivez et récupérez"
+      how_link: "Voir comment ça marche"
+
+    about:
+      page_title: "À propos"
+      title: "À propos de nous"
+      lead: "Rehoboth Trans Asia Cargo relie les entreprises africaines aux usines et aux marchés d'Asie."
+      where: "Nous travaillons depuis Hanoï et Guangzhou, au plus près des fournisseurs de nos clients, et nous expédions vers le Cameroun, le Ghana, la Côte d'Ivoire, le Nigeria, le Sénégal, le Kenya, l'Angola, la Guinée équatoriale et les deux Congo."
+      who: "Nos clients sont des commerçants, des boutiquiers et des entreprises qui ont besoin de marchandises d'Asie sans prendre de risques. Nous trouvons les bons produits, les recevons de vos fournisseurs, les vérifions et les expédions par avion ou par bateau. À l'arrivée, nous les dédouanons et vous les remettons."
+      name_title: "Notre nom"
+      name_text: "Rehoboth signifie « espace » ou « un lieu spacieux » : un lieu où l'on a de la place pour grandir. C'est ce que nous souhaitons aux entreprises de nos clients."
+      promise_title: "Notre promesse : notre parole est notre engagement"
+      promise_text: "Nous donnons des prix honnêtes, nous vous informons à chaque étape et nous respectons nos délais."
+
+    services:
+      page_title: "Services"
+      title: "Nos services"
+      intro: "De la recherche du fournisseur à la remise de vos marchandises en Afrique, nous nous occupons de chaque étape."
+      sourcing:
+        title: "Sourcing (achat pour vous)"
+        text: "Dites-nous ce dont vous avez besoin : une photo, un lien ou une description, la quantité et votre budget. Nous trouvons des fournisseurs au Vietnam et en Chine, comparons les prix, vérifions les échantillons et achetons pour vous. Vos marchandises vont ensuite directement à notre entrepôt pour l'expédition."
+      warehousing:
+        title: "Entreposage"
+        text: "Donnez à votre fournisseur votre code client et l'adresse de notre entrepôt à Hanoï ou à Guangzhou. À l'arrivée de vos marchandises, nous les pesons, les mesurons, les photographions et vous envoyons un message WhatsApp. Le stockage dans nos entrepôts en Asie est gratuit jusqu'à l'expédition."
+      air:
+        title: "Fret aérien"
+        text: "Des envois par avion partent chaque semaine. Choisissez l'avion pour les marchandises urgentes, de valeur ou légères : téléphones, accessoires, vêtements, cosmétiques, pièces détachées. Prix au kilogramme."
+      sea:
+        title: "Fret maritime"
+        text: "Le choix économique pour les marchandises volumineuses et lourdes."
+        lcl_title: "Conteneur groupé (LCL)"
+        lcl_text: "vous payez seulement l'espace occupé par vos marchandises, au mètre cube (CBM). Nous regroupons les marchandises de plusieurs clients et expédions quand le conteneur est plein."
+        fcl_title: "Conteneur complet (FCL)"
+        fcl_text: "un conteneur rien que pour vos marchandises."
+      customs:
+        title: "Dédouanement"
+        text: "Nous gérons les formalités douanières dans le pays de destination : vos marchandises sont prêtes à être récupérées sans que vous ayez à vous occuper des papiers."
+      collection:
+        title: "Retrait et stockage à destination"
+        text: "Quand vos marchandises sont prêtes, nous vous prévenons sur WhatsApp. Le stockage à nos points de destination est gratuit pendant 1 mois après l'arrivée ; au-delà, des frais de stockage s'appliquent."
+
+    destinations:
+      page_title: "Destinations"
+      title: "Itinéraires et destinations"
+      intro: "Nous expédions depuis deux plateformes en Asie vers 10 destinations dans 9 pays africains."
+      from_title: "Depuis l'Asie"
+      from_text: "Hanoï (Vietnam) et Guangzhou (Chine). Bientôt d'autres origines : Inde, Singapour, Japon, Thaïlande et Bangladesh."
+      to_title: "Vers l'Afrique"
+      to_text: "10 destinations dans 9 pays d'Afrique de l'Ouest, centrale et de l'Est."
+      list_title: "Où nous livrons"
+      col_country: "Pays"
+      col_presence: "Notre présence"
+      col_air: "Par avion"
+      col_sea: "Par bateau"
+      presence:
+        office: "Bureau Rehoboth"
+        agent: "Agent partenaire"
+      days: "%{count} jours"
+      weeks: "%{count} semaines"
+      tbc: "À confirmer"
+      not_listed: "Votre pays n'est pas dans la liste ? Écrivez-nous sur WhatsApp. Nous y livrons peut-être déjà via un partenaire."
+
+    how_it_works:
+      page_title: "Comment ça marche"
+      title: "Comment ça marche"
+      intro: "Six étapes simples, de votre fournisseur en Asie jusqu'à vous en Afrique."
+      steps:
+        code:
+          title: "Obtenez votre code client"
+          text: "Envoyez votre nom, votre numéro de téléphone et votre pays sur WhatsApp. Nous vous répondons avec votre code client personnel et l'adresse de notre entrepôt."
+        supplier:
+          title: "Votre fournisseur livre à notre entrepôt"
+          text: "Donnez-lui l'adresse et demandez-lui d'écrire votre code client sur chaque colis."
+        receive:
+          title: "Nous recevons et vérifions vos marchandises"
+          text: "Nous les pesons, les mesurons, les photographions, puis nous vous envoyons un message WhatsApp."
+        ship:
+          title: "Nous expédions"
+          text: "Vos marchandises partent par le prochain vol hebdomadaire ou dans le prochain conteneur. Vous recevez un code de suivi pour l'envoi."
+        track:
+          title: "Suivez chaque étape"
+          text: "Suivez nos messages WhatsApp : parti, en transit, arrivé, dédouané, prêt à être récupéré."
+        pay:
+          title: "Payez et récupérez"
+          text: "Payez à l'arrivée (ou avant l'expédition si vous préférez) par mobile money, virement bancaire ou en espèces, et récupérez vos marchandises. Stockage gratuit pendant 1 mois après l'arrivée."
+
+    faq:
+      page_title: "FAQ"
+      title: "Questions fréquentes"
+      intro: "Vous ne trouvez pas votre réponse ? Écrivez-nous sur WhatsApp."
+      items:
+        client_code:
+          q: "Comment obtenir un code client ?"
+          a: "Envoyez-nous votre nom, votre numéro de téléphone et votre pays sur WhatsApp. Nous vous répondons avec votre code, généralement le jour même."
+        cost:
+          q: "Combien coûte l'expédition ?"
+          a: "Le fret aérien est facturé au kilogramme et le fret maritime au mètre cube (CBM), selon la destination. Envoyez-nous le poids ou les dimensions de vos marchandises sur WhatsApp pour un devis."
+        duration:
+          q: "Combien de temps dure l'expédition ?"
+          a: "Cela dépend de la destination et du mode, avion ou bateau. Consultez la page Destinations ou demandez-nous sur WhatsApp."
+        payment:
+          q: "Quand dois-je payer ?"
+          a: "La plupart de nos clients paient à l'arrivée de leurs marchandises. Vous pouvez aussi payer avant l'expédition. Nous acceptons le mobile money, le virement bancaire et les espèces à notre bureau."
+        tracking:
+          q: "Comment suivre mes marchandises ?"
+          a: "Au départ de vos marchandises, vous recevez un code de suivi, et nous vous envoyons un message WhatsApp à chaque étape."
+        combine:
+          q: "Puis-je regrouper des marchandises de plusieurs fournisseurs ?"
+          a: "Oui. Tous vos colis attendent gratuitement dans notre entrepôt et partent ensemble."
+        customs:
+          q: "Gérez-vous la douane ?"
+          a: "Oui, nous dédouanons vos marchandises dans le pays de destination."
+        restricted:
+          q: "Que ne puis-je pas expédier ?"
+          a: "Certaines marchandises sont réglementées, par exemple les batteries par avion, les liquides, les produits inflammables et les contrefaçons. Écrivez-nous sur WhatsApp avant d'acheter si vous avez un doute."
+        storage:
+          q: "Combien de temps mes marchandises peuvent-elles rester à destination ?"
+          a: "1 mois gratuit après l'arrivée. Au-delà, des frais de stockage s'appliquent."
+        damage:
+          q: "Que se passe-t-il si mes marchandises sont endommagées ou perdues ?"
+          a: "Chaque colis est vérifié et photographié à son arrivée dans notre entrepôt. En cas de problème, écrivez-nous immédiatement sur WhatsApp avec votre code client."
+
+    contact:
+      page_title: "Contact"
+      title: "Parlez-nous"
+      intro: "Le moyen le plus rapide de nous joindre est WhatsApp. Choisissez l'entrepôt d'où partent vos marchandises."
+      offices:
+        vietnam: "Vietnam (Hanoï)"
+        china: "Chine (Guangzhou)"
+      email: "E-mail"
+      hours: "Horaires"
+
+    track:
+      page_title: "Suivre votre envoi"
+      title: "Suivre votre envoi"
+      coming_soon_badge: "Disponible en février 2027"
+      coming_soon_text: "Le suivi en ligne arrive bientôt. En attendant, envoyez votre code client sur WhatsApp et nous vous dirons où sont vos marchandises."

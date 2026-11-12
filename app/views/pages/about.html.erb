@@ -1,4 +1,16 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#about</h1>
-  <p>Find me in app/views/pages/about.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title"), intro: t(".lead") %>
+
+<section class="mx-auto max-w-3xl px-4 py-10 text-base leading-relaxed text-slate-700 md:text-lg">
+  <p><%= t(".where") %></p>
+  <p class="mt-4"><%= t(".who") %></p>
+
+  <h2 class="mt-10 text-2xl font-extrabold text-brand-ink"><%= t(".name_title") %></h2>
+  <p class="mt-3"><%= t(".name_text") %></p>
+
+  <h2 class="mt-10 text-2xl font-extrabold text-brand-ink"><%= t(".promise_title") %></h2>
+  <p class="mt-3"><%= t(".promise_text") %></p>
+</section>
+
+<%= render "shared/cta" %>

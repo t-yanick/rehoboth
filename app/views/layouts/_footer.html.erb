@@ -1,0 +1,47 @@
+<footer class="mt-16 bg-brand-ink pb-24 text-slate-300 xl:pb-0">
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
+
+    <%# Company %>
+    <div>
+      <p class="text-lg font-extrabold text-white">Rehoboth Trans Asia Cargo</p>
+      <p class="mt-1 italic text-brand-sky"><%= t("footer.tagline") %></p>
+      <p class="mt-4 text-sm leading-relaxed"><%= t("footer.about") %></p>
+    </div>
+
+    <%# Contact %>
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-wider text-white"><%= t("footer.contact_heading") %></h2>
+      <ul class="mt-4 space-y-1 text-sm">
+        <li>
+          <%= link_to whatsapp_url(:vietnam), target: "_blank", rel: "noopener", class: "flex min-h-11 items-center hover:text-white" do %>
+            <%= t("footer.vietnam") %>: <%= site[:whatsapp][:vietnam][:display] %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to whatsapp_url(:china), target: "_blank", rel: "noopener", class: "flex min-h-11 items-center hover:text-white" do %>
+            <%= t("footer.china") %>: <%= site[:whatsapp][:china][:display] %>
+          <% end %>
+        </li>
+        <li>
+          <%= mail_to site[:email], site[:email], class: "flex min-h-11 items-center hover:text-white" %>
+        </li>
+      </ul>
+    </div>
+
+    <%# Quick links %>
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-wider text-white"><%= t("footer.links_heading") %></h2>
+      <ul class="mt-4 grid grid-cols-2 gap-x-4 text-sm">
+        <% nav_items.except(:home).each do |key, path| %>
+          <li><%= link_to t("nav.#{key}"), path, class: "flex min-h-11 items-center hover:text-white" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <p class="mx-auto max-w-6xl px-4 py-4 text-xs text-slate-400">
+      © <%= Date.current.year %> Rehoboth Trans Asia Cargo. <%= t("footer.rights") %>
+    </p>
+  </div>
+</footer>

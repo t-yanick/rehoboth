@@ -1,4 +1,19 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#faq</h1>
-  <p>Find me in app/views/pages/faq.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title"), intro: t(".intro") %>
+
+<section class="mx-auto max-w-3xl px-4 py-10">
+  <div class="divide-y divide-slate-200 rounded-xl border border-slate-200">
+    <% %w[client_code cost duration payment tracking combine customs restricted storage damage].each do |key| %>
+      <details class="group px-5">
+        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-3 text-base font-bold text-brand-ink [&::-webkit-details-marker]:hidden">
+          <span><%= t(".items.#{key}.q") %></span>
+          <span aria-hidden="true" class="text-xl text-brand-blue transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="pb-5 text-base leading-relaxed text-slate-700"><%= t(".items.#{key}.a") %></p>
+      </details>
+    <% end %>
+  </div>
+</section>
+
+<%= render "shared/cta" %>
