@@ -10,7 +10,7 @@ module Rehoboth
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.1
-    config.i18n.available_locales = [:en, :fr]
+    config.i18n.available_locales = [ :en, :fr ]
     config.i18n.default_locale = :en
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
