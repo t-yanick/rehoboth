@@ -3,8 +3,19 @@ module ApplicationHelper
     Rails.configuration.x.site
   end
 
+  # WhatsApp link for one of the two Asian offices (:vietnam / :china)
   def whatsapp_url(office)
-    "https://wa.me/#{site[:whatsapp][office][:wa]}"
+    wa_url(site[:whatsapp][office][:wa])
+  end
+
+  # WhatsApp link for any number in wa.me format (digits only, country code first)
+  def wa_url(number)
+    "https://wa.me/#{number}"
+  end
+
+  # Phone link: "+237 000 000 000" -> "tel:+237000000000"
+  def tel_url(display_number)
+    "tel:#{display_number.to_s.delete(' ')}"
   end
 
   # Order here = order in the menus

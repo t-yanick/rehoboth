@@ -2,11 +2,13 @@
   <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 xl:h-20">
 
     <%# Logo %>
-    <%= link_to root_path, class: "shrink-0" do %>
-      <%= image_tag "rehoboth-logo-header.webp",
-            alt: "Rehoboth Trans Asia Cargo",
-            width: 173, height: 40,
-            class: "h-10 w-auto xl:h-12" %>
+    <%# Icon as image, name as real text: sharp and readable at any size %>
+    <%= link_to root_path, class: "flex shrink-0 items-center gap-2" do %>
+      <%= image_tag "rehoboth-icon.webp", alt: "", width: 44, height: 42, class: "h-10 w-auto xl:h-12" %>
+      <span class="leading-none">
+        <span class="block text-lg font-extrabold tracking-wide text-brand-blue xl:text-xl">REHOBOTH</span>
+        <span class="mt-0.5 block text-[0.62rem] font-bold tracking-[0.18em] text-brand-sage-dark xl:text-xs">TRANS ASIA CARGO</span>
+      </span>
     <% end %>
 
     <%# Desktop navigation (1280px and up) %>
@@ -26,8 +28,8 @@
             target: "_blank", rel: "noopener",
             class: "hidden min-h-11 items-center rounded-full bg-brand-sage-dark px-5 text-sm font-semibold whitespace-nowrap text-white hover:bg-brand-sage xl:inline-flex" %>
 
-      <%# Phone/tablet menu (below 1280px) — works without JavaScript %>
-      <details class="relative xl:hidden">
+      <%# Phone/tablet menu (below 1280px). Works without JavaScript; the menu controller adds close-on-outside-tap and Escape %>
+      <details class="relative xl:hidden" data-controller="menu">
         <summary class="inline-flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-300 text-brand-ink [&::-webkit-details-marker]:hidden"
                  aria-label="<%= t("nav.menu") %>">
           <svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>

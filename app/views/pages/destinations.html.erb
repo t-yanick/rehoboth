@@ -1,4 +1,6 @@
 <% content_for :title, t(".page_title") %>
+<%# Transit lines only appear once at least one transit time is filled in config/site.yml %>
+<% show_transit = site[:destinations].any? { |d| d[:air_days].present? || d[:sea_weeks].present? } %>
 
 <%= render "shared/page_header", title: t(".title"), intro: t(".intro") %>
 
@@ -15,25 +17,45 @@
   </div>
 
   <h2 class="mt-10 text-2xl font-extrabold text-brand-ink"><%= t(".list_title") %></h2>
+  <p class="mt-2 text-base text-slate-600"><%= t(".list_intro") %></p>
 
-  <%# Cards on phones, table look from md up %>
-  <ul class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
-    <li class="hidden grid-cols-4 gap-4 bg-slate-50 px-5 py-3 text-sm font-bold uppercase tracking-wide text-slate-500 md:grid">
-      <span><%= t(".col_country") %></span>
-      <span><%= t(".col_presence") %></span>
-      <span><%= t(".col_air") %></span>
-      <span><%= t(".col_sea") %></span>
-    </li>
+  <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
     <% site[:destinations].each do |d| %>
-      <li class="grid grid-cols-2 gap-x-4 gap-y-1 px-5 py-4 text-base md:grid-cols-4">
-        <span class="col-span-2 font-bold text-brand-ink md:col-span-1"><%= t("countries.#{d[:code]}") %></span>
-        <span class="text-slate-600"><%= t(".presence.#{d[:presence]}") %></span>
-        <span class="text-slate-600">
-          <span class="md:hidden"><%= t(".col_air") %>: </span><%= d[:air_days].present? ? t(".days", count: d[:air_days]) : t(".tbc") %>
-        </span>
-        <span class="col-start-2 text-slate-600 md:col-start-auto">
-          <span class="md:hidden"><%= t(".col_sea") %>: </span><%= d[:sea_weeks].present? ? t(".weeks", count: d[:sea_weeks]) : t(".tbc") %>
-        </span>
+      <li class="flex flex-col rounded-xl border border-slate-200 p-5">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-extrabold text-brand-ink"><%= t("countries.#{d[:code]}") %></h3>
+          <span class="shrink-0 rounded-full px-3 py-1 text-xs font-semibold <%= d[:presence] == 'office' ? 'bg-brand-blue text-white' : 'bg-slate-100 text-slate-600' %>">
+            <%= t(".presence.#{d[:presence]}") %>
+          </span>
+        </div>
+
+        <p class="mt-2 text-base font-semibold text-slate-700"><%= d[:city] %></p>
+        <p class="text-sm text-slate-500"><%= d[:address].presence || t(".address_tbc") %></p>
+
+        <% if show_transit %>
+          <p class="mt-3 text-sm text-slate-600">
+            <%= t(".col_air") %>: <%= d[:air_days].present? ? t(".days", count: d[:air_days]) : t(".tbc") %>
+            · <%= t(".col_sea") %>: <%= d[:sea_weeks].present? ? t(".weeks", count: d[:sea_weeks]) : t(".tbc") %>
+          </p>
+        <% end %>
+
+        <div class="mt-4 flex flex-wrap gap-2 pt-1">
+          <% if d[:wa].present? %>
+            <%= link_to t(".whatsapp"), wa_url(d[:wa]), target: "_blank", rel: "noopener",
+                  class: "inline-flex min-h-11 items-center rounded-full bg-brand-sage-dark px-4 text-sm font-bold text-white active:scale-95" %>
+          <% end %>
+          <% if d[:phone].present? %>
+            <%= link_to t(".call"), tel_url(d[:phone]),
+                  class: "inline-flex min-h-11 items-center rounded-full border border-slate-300 px-4 text-sm font-bold text-brand-ink active:scale-95" %>
+          <% end %>
+          <% if d[:email].present? %>
+            <%= mail_to d[:email], t(".email"),
+                  class: "inline-flex min-h-11 items-center rounded-full border border-slate-300 px-4 text-sm font-bold text-brand-ink active:scale-95" %>
+          <% end %>
+        </div>
+        <% if d[:phone].present? %>
+          <p class="mt-2 text-sm text-slate-500"><%= d[:phone] %></p>
+        <% end %>
       </li>
     <% end %>
   </ul>

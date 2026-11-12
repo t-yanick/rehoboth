@@ -16,16 +16,17 @@ shared:
     china:
       city: "Guangzhou"
       address: "Warehouse address to be confirmed, Guangzhou, China"
-  # Destinations shown on the Destinations page.
-  # presence: office | agent · air_days / sea_weeks: leave empty until Collins confirms
+  # Destinations shown on the Destinations page (DUMMY numbers: country code + zeros, cannot exist).
+  # presence: office | agent · address: leave empty to show "Address to be confirmed"
+  # air_days / sea_weeks: leave empty until Collins confirms (transit lines stay hidden)
   destinations:
-    - { code: cm, presence: office, air_days: "", sea_weeks: "" }
-    - { code: ng, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: gh, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: ci, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: sn, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: ke, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: ao, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: gq, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: cd, presence: agent,  air_days: "", sea_weeks: "" }
-    - { code: cg, presence: agent,  air_days: "", sea_weeks: "" }
+    - { code: cm, presence: office, city: "Douala",      address: "", phone: "+237 000 000 000", wa: "237000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: ng, presence: agent,  city: "Lagos",       address: "", phone: "+234 000 000 0000", wa: "2340000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: gh, presence: agent,  city: "Accra",       address: "", phone: "+233 000 000 000", wa: "233000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: ci, presence: agent,  city: "Abidjan",     address: "", phone: "+225 00 00 00 00 00", wa: "2250000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: sn, presence: agent,  city: "Dakar",       address: "", phone: "+221 000 000 000", wa: "221000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: ke, presence: agent,  city: "Nairobi",     address: "", phone: "+254 000 000 000", wa: "254000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: ao, presence: agent,  city: "Luanda",      address: "", phone: "+244 000 000 000", wa: "244000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: gq, presence: agent,  city: "Malabo",      address: "", phone: "+240 000 000 000", wa: "240000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: cd, presence: agent,  city: "Kinshasa",    address: "", phone: "+243 000 000 000", wa: "243000000000", email: "", air_days: "", sea_weeks: "" }
+    - { code: cg, presence: agent,  city: "Brazzaville", address: "", phone: "+242 00 000 0000", wa: "242000000000", email: "", air_days: "", sea_weeks: "" }
