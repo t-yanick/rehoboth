@@ -1,4 +1,12 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#track</h1>
-  <p>Find me in app/views/pages/track.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title") %>
+
+<section class="mx-auto max-w-xl px-4 py-10">
+  <div class="rounded-2xl border border-slate-200 p-6 text-center">
+    <p class="inline-flex rounded-full bg-brand-sky/25 px-3 py-1 text-sm font-bold text-brand-blue"><%= t(".coming_soon_badge") %></p>
+    <p class="mt-4 text-base leading-relaxed text-slate-700"><%= t(".coming_soon_text") %></p>
+    <%= link_to t("nav.chat_whatsapp"), whatsapp_url(:vietnam), target: "_blank", rel: "noopener",
+          class: "mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-brand-sage-dark px-6 text-base font-bold text-white active:scale-95 sm:w-auto" %>
+  </div>
+</section>

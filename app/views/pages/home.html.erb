@@ -1,1 +1,65 @@
-<h1 class="text-3xl font-bold"><%= t(".headline") %></h1>
+<% content_for :title, t(".page_title") %>
+
+<%# Hero %>
+<section class="bg-gradient-to-br from-brand-blue to-[#164a85] text-white">
+  <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+    <h1 class="max-w-3xl text-3xl font-extrabold leading-tight md:text-5xl"><%= t(".headline") %></h1>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg"><%= t(".subheadline") %></p>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <%= link_to t("nav.chat_whatsapp"), whatsapp_url(:vietnam), target: "_blank", rel: "noopener",
+            class: "inline-flex min-h-12 items-center justify-center rounded-full bg-brand-sage-dark px-6 text-base font-bold text-white active:scale-95" %>
+      <%= link_to t(".track_button"), track_path,
+            class: "inline-flex min-h-12 items-center justify-center rounded-full border-2 border-white/70 px-6 text-base font-bold text-white active:scale-95" %>
+    </div>
+  </div>
+</section>
+
+<%# Services %>
+<section class="mx-auto max-w-6xl px-4 py-12">
+  <h2 class="text-2xl font-extrabold text-brand-ink md:text-3xl"><%= t(".services_title") %></h2>
+  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <% %w[sourcing warehousing air sea customs].each do |key| %>
+      <div class="rounded-xl border border-slate-200 p-5">
+        <h3 class="text-lg font-bold text-brand-blue"><%= t("pages.services.#{key}.title") %></h3>
+        <p class="mt-2 text-base leading-relaxed text-slate-600"><%= t(".services.#{key}") %></p>
+      </div>
+    <% end %>
+    <%= link_to services_path, class: "flex min-h-24 items-center justify-center rounded-xl bg-brand-sky/20 p-5 text-base font-bold text-brand-blue" do %>
+      <%= t(".all_services") %> →
+    <% end %>
+  </div>
+</section>
+
+<%# Why Rehoboth %>
+<section class="bg-slate-50">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-extrabold text-brand-ink md:text-3xl"><%= t(".why_title") %></h2>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2">
+      <% %w[word tracking pay_on_arrival language].each do |key| %>
+        <div class="flex gap-4">
+          <div class="mt-1 h-3 w-3 shrink-0 rounded-full bg-brand-sage"></div>
+          <div>
+            <h3 class="text-lg font-bold text-brand-ink"><%= t(".why.#{key}.title") %></h3>
+            <p class="mt-1 text-base leading-relaxed text-slate-600"><%= t(".why.#{key}.text") %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%# How it works (short) %>
+<section class="mx-auto max-w-6xl px-4 py-12">
+  <h2 class="text-2xl font-extrabold text-brand-ink md:text-3xl"><%= t(".how_title") %></h2>
+  <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <% %w[code supplier ship track].each_with_index do |key, i| %>
+      <li class="rounded-xl border border-slate-200 p-5">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-blue text-base font-bold text-white"><%= i + 1 %></span>
+        <p class="mt-3 text-base font-semibold text-brand-ink"><%= t(".how.#{key}") %></p>
+      </li>
+    <% end %>
+  </ol>
+  <%= link_to "#{t('.how_link')} →", how_it_works_path, class: "mt-6 inline-flex min-h-11 items-center text-base font-bold text-brand-blue" %>
+</section>
+
+<%= render "shared/cta" %>

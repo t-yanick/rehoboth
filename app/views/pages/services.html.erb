@@ -1,4 +1,22 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#services</h1>
-  <p>Find me in app/views/pages/services.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title"), intro: t(".intro") %>
+
+<section class="mx-auto max-w-6xl px-4 py-10">
+  <div class="grid gap-5 md:grid-cols-2">
+    <% %w[sourcing warehousing air sea customs collection].each do |key| %>
+      <article id="<%= key %>" class="scroll-mt-24 rounded-xl border border-slate-200 p-6">
+        <h2 class="text-xl font-extrabold text-brand-blue"><%= t(".#{key}.title") %></h2>
+        <p class="mt-3 text-base leading-relaxed text-slate-700"><%= t(".#{key}.text") %></p>
+        <% if key == "sea" %>
+          <ul class="mt-4 space-y-2 text-base text-slate-700">
+            <li><strong><%= t(".sea.lcl_title") %>:</strong> <%= t(".sea.lcl_text") %></li>
+            <li><strong><%= t(".sea.fcl_title") %>:</strong> <%= t(".sea.fcl_text") %></li>
+          </ul>
+        <% end %>
+      </article>
+    <% end %>
+  </div>
+</section>
+
+<%= render "shared/cta" %>

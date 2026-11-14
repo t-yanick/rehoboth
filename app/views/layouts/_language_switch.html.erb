@@ -1,0 +1,8 @@
+<div class="inline-flex overflow-hidden rounded-full border border-slate-300 text-sm font-bold" role="group" aria-label="<%= t("nav.language") %>">
+  <% I18n.available_locales.each do |locale| %>
+    <%= link_to locale.to_s.upcase, url_for(locale: locale),
+          hreflang: locale, lang: locale,
+          class: "inline-flex min-h-11 min-w-11 items-center justify-center px-3 #{locale == I18n.locale ? 'bg-brand-blue text-white' : 'text-brand-ink hover:bg-slate-100'}",
+          aria: { current: (locale == I18n.locale ? "true" : nil) } %>
+  <% end %>
+</div>

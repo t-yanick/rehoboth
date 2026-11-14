@@ -1,4 +1,17 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#how_it_works</h1>
-  <p>Find me in app/views/pages/how_it_works.html.erb</p>
-</div>
+<% content_for :title, t(".page_title") %>
+
+<%= render "shared/page_header", title: t(".title"), intro: t(".intro") %>
+
+<section class="mx-auto max-w-3xl px-4 py-10">
+  <ol class="relative space-y-8 border-l-2 border-brand-sky pl-8">
+    <% %w[code supplier receive ship track pay].each_with_index do |key, i| %>
+      <li class="relative">
+        <span class="absolute -left-[3.05rem] inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue text-base font-bold text-white ring-4 ring-white"><%= i + 1 %></span>
+        <h2 class="text-lg font-extrabold text-brand-ink"><%= t(".steps.#{key}.title") %></h2>
+        <p class="mt-1 text-base leading-relaxed text-slate-700"><%= t(".steps.#{key}.text") %></p>
+      </li>
+    <% end %>
+  </ol>
+</section>
+
+<%= render "shared/cta" %>
