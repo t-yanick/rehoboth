@@ -1,0 +1,83 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        email_address: "Email"
+        role: "Role"
+        locale: "Language"
+        active: "Active"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+
+  sessions:
+    invalid: "Wrong email or password, or this account is disabled."
+    rate_limited: "Too many attempts. Try again in a few minutes."
+    new:
+      title: "Staff sign in"
+      email: "Email"
+      password: "Password"
+      submit: "Sign in"
+      forgot: "Forgot your password?"
+
+  admin:
+    title: "Rehoboth Admin"
+    nav:
+      dashboard: "Dashboard"
+      staff: "Staff"
+      view_site: "View website"
+      logout: "Sign out"
+    auth:
+      inactive: "This account is disabled."
+      forbidden: "You don't have access to that page."
+    roles:
+      hq_admin: "HQ admin"
+      warehouse_staff: "Warehouse staff"
+      country_manager: "Country manager"
+      agent: "Agent"
+    locales:
+      en: "English"
+      fr: "French"
+    dashboard:
+      show:
+        title: "Dashboard"
+        welcome: "Welcome, %{name}"
+        role: "Role: %{role}"
+        coming_soon: "Coming soon"
+        cards:
+          departures:
+            title: "Departures"
+            text: "Next flights and containers, with cut-off times."
+          updates:
+            title: "Updates"
+            text: "Alerts, news, events and promotions for clients."
+          clients:
+            title: "Clients"
+            text: "Client register and client codes."
+    users:
+      index:
+        title: "Staff"
+        new: "Add staff"
+        active: "Active"
+        inactive: "Disabled"
+      new:
+        title: "Add staff member"
+      edit:
+        title: "Edit %{name}"
+      form:
+        name: "Full name"
+        email: "Email"
+        role: "Role"
+        locale: "Language"
+        active: "Account active"
+        password: "Password"
+        password_confirmation: "Repeat password"
+        password_new_hint: "At least 12 characters."
+        password_hint: "Leave both password fields blank to keep the current password."
+        save: "Save"
+        cancel: "Cancel"
+      create:
+        created: "Staff member added."
+      update:
+        updated: "Changes saved."
+        cannot_change_self: "You can't remove your own HQ admin role or disable your own account."

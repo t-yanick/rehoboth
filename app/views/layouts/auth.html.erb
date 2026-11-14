@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title><%= t("admin.title") %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="icon" href="/icon.png" type="image/png">
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="min-h-screen bg-slate-100 font-sans text-brand-ink">
+    <main class="mx-auto flex min-h-screen max-w-md flex-col justify-center px-4 py-10">
+      <div class="mb-6 flex items-center justify-center gap-2">
+        <%= image_tag "rehoboth-icon.webp", alt: "", width: 44, height: 42, class: "h-11 w-auto" %>
+        <span class="leading-none">
+          <span class="block text-xl font-extrabold text-brand-blue">REHOBOTH</span>
+          <span class="block text-xs font-bold tracking-[0.18em] text-brand-sage-dark">ADMIN</span>
+        </span>
+      </div>
+      <% if alert %><div class="mb-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700"><%= alert %></div><% end %>
+      <% if notice %><div class="mb-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700"><%= notice %></div><% end %>
+      <div class="rounded-2xl bg-white p-6 shadow-sm">
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

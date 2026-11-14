@@ -1,0 +1,83 @@
+fr:
+  activerecord:
+    attributes:
+      user:
+        name: "Nom"
+        email_address: "E-mail"
+        role: "Rôle"
+        locale: "Langue"
+        active: "Actif"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+
+  sessions:
+    invalid: "E-mail ou mot de passe incorrect, ou compte désactivé."
+    rate_limited: "Trop de tentatives. Réessayez dans quelques minutes."
+    new:
+      title: "Connexion du personnel"
+      email: "E-mail"
+      password: "Mot de passe"
+      submit: "Se connecter"
+      forgot: "Mot de passe oublié ?"
+
+  admin:
+    title: "Administration Rehoboth"
+    nav:
+      dashboard: "Tableau de bord"
+      staff: "Personnel"
+      view_site: "Voir le site"
+      logout: "Se déconnecter"
+    auth:
+      inactive: "Ce compte est désactivé."
+      forbidden: "Vous n'avez pas accès à cette page."
+    roles:
+      hq_admin: "Administrateur siège"
+      warehouse_staff: "Personnel d'entrepôt"
+      country_manager: "Responsable pays"
+      agent: "Agent"
+    locales:
+      en: "Anglais"
+      fr: "Français"
+    dashboard:
+      show:
+        title: "Tableau de bord"
+        welcome: "Bienvenue, %{name}"
+        role: "Rôle : %{role}"
+        coming_soon: "Bientôt disponible"
+        cards:
+          departures:
+            title: "Départs"
+            text: "Prochains vols et conteneurs, avec les dates limites."
+          updates:
+            title: "Actualités"
+            text: "Alertes, nouvelles, événements et promotions pour les clients."
+          clients:
+            title: "Clients"
+            text: "Registre des clients et codes clients."
+    users:
+      index:
+        title: "Personnel"
+        new: "Ajouter"
+        active: "Actif"
+        inactive: "Désactivé"
+      new:
+        title: "Ajouter un membre du personnel"
+      edit:
+        title: "Modifier %{name}"
+      form:
+        name: "Nom complet"
+        email: "E-mail"
+        role: "Rôle"
+        locale: "Langue"
+        active: "Compte actif"
+        password: "Mot de passe"
+        password_confirmation: "Répéter le mot de passe"
+        password_new_hint: "Au moins 12 caractères."
+        password_hint: "Laissez les deux champs vides pour garder le mot de passe actuel."
+        save: "Enregistrer"
+        cancel: "Annuler"
+      create:
+        created: "Membre du personnel ajouté."
+      update:
+        updated: "Modifications enregistrées."
+        cannot_change_self: "Vous ne pouvez pas retirer votre propre rôle d'administrateur ni désactiver votre compte."
