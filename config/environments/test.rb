@@ -52,4 +52,10 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+
+  # Fixed keys for tests only (CI has no master key)
+  config.active_record.encryption.primary_key = "test-primary-key-for-rehoboth-0001"
+  config.active_record.encryption.deterministic_key = "test-deterministic-key-for-rehoboth-01"
+  config.active_record.encryption.key_derivation_salt = "test-key-derivation-salt-for-rehoboth"
+  config.active_record.encryption.encrypt_fixtures = true
 end

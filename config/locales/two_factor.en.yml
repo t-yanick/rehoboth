@@ -1,0 +1,49 @@
+en:
+  two_factor_sessions:
+    invalid: "That code didn't work. Check your app and try the newest code."
+    expired: "Please sign in again."
+    new:
+      title: "Two-step verification"
+      text: "Open your authenticator app and enter the 6-digit code for Rehoboth Admin."
+      code: "6-digit code"
+      submit: "Verify"
+      back: "Back to sign in"
+
+  admin:
+    nav:
+      security: "Security"
+    auth:
+      two_factor_required: "HQ admins must turn on two-step verification before continuing."
+    two_factors:
+      show:
+        title: "Two-step verification"
+        explain: "A 6-digit code from an app on your phone, in addition to your password."
+        enabled: "On since %{date}"
+        disabled: "Off"
+        turn_on: "Turn on"
+        turn_off: "Turn off"
+        required_note: "Required for HQ admins, so it can't be turned off."
+      new:
+        title: "Turn on two-step verification"
+        step1: "Install an authenticator app on your phone: Google Authenticator, Microsoft Authenticator or 2FAS."
+        step2: "In the app, add an account and scan this QR code."
+        manual: "Can't scan? Enter this key in the app instead:"
+        step3: "Enter the 6-digit code shown in the app."
+        code: "6-digit code"
+        submit: "Turn on"
+      create:
+        enabled: "Two-step verification is on."
+        invalid: "That code didn't work. Try the newest code in your app."
+      destroy:
+        disabled: "Two-step verification is off."
+        required_for_hq: "HQ admins can't turn off two-step verification."
+    users:
+      edit:
+        two_factor_title: "Two-step verification"
+        two_factor_on: "On"
+        two_factor_off: "Off"
+        reset: "Reset two-step verification"
+        reset_confirm: "Reset it? This person will set it up again at their next sign-in."
+      reset_two_factor:
+        reset: "Two-step verification has been reset."
+        cannot_self: "Use the Security page to manage your own verification."

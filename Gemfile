@@ -68,3 +68,6 @@ group :test do
 end
 
 gem "rails-i18n", "~> 8.1"
+
+gem "rotp", "~> 6.4"
+gem "rqrcode", "~> 3.2"
