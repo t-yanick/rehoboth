@@ -30,6 +30,7 @@
           <% if Current.user.hq_admin? %>
             <%= admin_nav_link t("admin.nav.staff"), admin_users_path %>
           <% end %>
+          <%= admin_nav_link t("admin.nav.security"), admin_two_factor_path %>
           <%= link_to t("admin.nav.view_site"), root_path, target: "_blank",
                 class: "inline-flex min-h-11 items-center whitespace-nowrap px-3 text-white/90 hover:text-white" %>
         </div>

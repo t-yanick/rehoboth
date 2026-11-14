@@ -1,7 +1,7 @@
 module Admin
   class UsersController < BaseController
     before_action :require_hq_admin
-    before_action :set_user, only: %i[edit update]
+    before_action :set_user, only: %i[edit update reset_two_factor]
 
     def index
       @users = User.order(:name)
@@ -36,6 +36,15 @@ module Admin
       else
         render :edit, status: :unprocessable_content
       end
+    end
+
+    # For a staff member who lost their phone: they set it up again at next sign-in
+    def reset_two_factor
+      return redirect_to(edit_admin_user_path(@user), alert: t(".cannot_self")) if @user == Current.user
+
+      @user.reset_otp!
+      @user.sessions.destroy_all
+      redirect_to edit_admin_user_path(@user), notice: t(".reset")
     end
 
     private

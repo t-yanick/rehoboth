@@ -1,3 +1,16 @@
 <% content_for :title, t(".title", name: @user.name) %>
 <h1 class="text-2xl font-extrabold"><%= t(".title", name: @user.name) %></h1>
+
 <%= render "form", user: @user %>
+
+<section class="mt-6 rounded-xl bg-white p-5 shadow-sm">
+  <h2 class="font-bold"><%= t(".two_factor_title") %></h2>
+  <p class="mt-1 text-sm <%= @user.otp_enabled? ? 'text-green-700' : 'text-slate-500' %>">
+    <%= @user.otp_enabled? ? t(".two_factor_on") : t(".two_factor_off") %>
+  </p>
+  <% if @user.otp_enabled? && @user != Current.user %>
+    <%= button_to t(".reset"), reset_two_factor_admin_user_path(@user), method: :patch,
+          form: { data: { turbo_confirm: t(".reset_confirm") } },
+          class: "mt-3 min-h-11 cursor-pointer rounded-full border border-red-300 px-5 text-sm font-semibold text-red-700" %>
+  <% end %>
+</section>

@@ -8,9 +8,17 @@ class SessionsController < ApplicationController
 
   def create
     user = User.authenticate_by(params.permit(:email_address, :password))
+
     if user&.active?
-      start_new_session_for user
-      redirect_to after_authentication_url
+      if user.otp_enabled?
+        # Password OK: remember who is signing in, then ask for the code
+        session[:pending_otp_user_id] = user.id
+        session[:pending_otp_at] = Time.current.to_i
+        redirect_to new_two_factor_session_path
+      else
+        start_new_session_for user
+        redirect_to after_authentication_url
+      end
     else
       redirect_to new_session_path, alert: t("sessions.invalid")
     end

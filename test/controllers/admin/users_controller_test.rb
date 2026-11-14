@@ -3,6 +3,7 @@ require "test_helper"
 class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
   def sign_in(user)
     post session_path, params: { email_address: user.email_address, password: "password" }
+    post two_factor_session_path, params: { code: ROTP::TOTP.new(user.otp_secret).now } if user.otp_enabled?
   end
 
   test "signed-out visitors are sent to the login page" do
@@ -40,5 +41,13 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
       locale: "en", active: "1", password: "", password_confirmation: ""
     } }
     assert users(:one).reload.hq_admin?
+  end
+
+  test "hq admin resets another person's two-step verification" do
+    other = users(:warehouse)
+    other.update!(otp_secret: ROTP::Base32.random, otp_enabled_at: Time.current)
+    sign_in users(:one)
+    patch reset_two_factor_admin_user_path(other)
+    assert_not other.reload.otp_enabled?
   end
 end

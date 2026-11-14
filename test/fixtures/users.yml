@@ -7,6 +7,16 @@ one:
   role: hq_admin
   locale: en
   active: true
+  otp_secret: JBSWY3DPEHPK3PXP
+  otp_enabled_at: <%= 1.day.ago.to_fs(:db) %>
+
+hq_no_otp:
+  name: "New HQ Admin"
+  email_address: newhq@example.com
+  password_digest: <%= password_digest %>
+  role: hq_admin
+  locale: en
+  active: true
 
 warehouse:
   name: "Hanoi Clerk"

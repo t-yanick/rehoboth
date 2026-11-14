@@ -1,0 +1,49 @@
+fr:
+  two_factor_sessions:
+    invalid: "Ce code n'a pas fonctionné. Vérifiez votre application et essayez le code le plus récent."
+    expired: "Veuillez vous reconnecter."
+    new:
+      title: "Vérification en deux étapes"
+      text: "Ouvrez votre application d'authentification et saisissez le code à 6 chiffres de Rehoboth Admin."
+      code: "Code à 6 chiffres"
+      submit: "Vérifier"
+      back: "Retour à la connexion"
+
+  admin:
+    nav:
+      security: "Sécurité"
+    auth:
+      two_factor_required: "Les administrateurs du siège doivent activer la vérification en deux étapes pour continuer."
+    two_factors:
+      show:
+        title: "Vérification en deux étapes"
+        explain: "Un code à 6 chiffres provenant d'une application sur votre téléphone, en plus de votre mot de passe."
+        enabled: "Activée depuis le %{date}"
+        disabled: "Désactivée"
+        turn_on: "Activer"
+        turn_off: "Désactiver"
+        required_note: "Obligatoire pour les administrateurs du siège : elle ne peut pas être désactivée."
+      new:
+        title: "Activer la vérification en deux étapes"
+        step1: "Installez une application d'authentification sur votre téléphone : Google Authenticator, Microsoft Authenticator ou 2FAS."
+        step2: "Dans l'application, ajoutez un compte et scannez ce code QR."
+        manual: "Impossible de scanner ? Saisissez plutôt cette clé dans l'application :"
+        step3: "Saisissez le code à 6 chiffres affiché dans l'application."
+        code: "Code à 6 chiffres"
+        submit: "Activer"
+      create:
+        enabled: "La vérification en deux étapes est activée."
+        invalid: "Ce code n'a pas fonctionné. Essayez le code le plus récent de votre application."
+      destroy:
+        disabled: "La vérification en deux étapes est désactivée."
+        required_for_hq: "Les administrateurs du siège ne peuvent pas désactiver la vérification en deux étapes."
+    users:
+      edit:
+        two_factor_title: "Vérification en deux étapes"
+        two_factor_on: "Activée"
+        two_factor_off: "Désactivée"
+        reset: "Réinitialiser la vérification en deux étapes"
+        reset_confirm: "Réinitialiser ? Cette personne devra la configurer à nouveau à sa prochaine connexion."
+      reset_two_factor:
+        reset: "La vérification en deux étapes a été réinitialisée."
+        cannot_self: "Utilisez la page Sécurité pour gérer votre propre vérification."
