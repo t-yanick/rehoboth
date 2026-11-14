@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title><%= content_for?(:title) ? "#{yield(:title)} · #{t('admin.title')}" : t("admin.title") %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="icon" href="/icon.png" type="image/png">
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="min-h-screen bg-slate-100 font-sans text-brand-ink">
+    <header class="sticky top-0 z-30 bg-brand-blue text-white">
+      <div class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4">
+        <%= link_to admin_root_path, class: "flex items-center gap-2 font-extrabold" do %>
+          <%= image_tag "rehoboth-icon.webp", alt: "", width: 32, height: 31, class: "h-8 w-auto rounded bg-white p-0.5" %>
+          <span><%= t("admin.title") %></span>
+        <% end %>
+        <div class="flex items-center gap-3 text-sm">
+          <span class="hidden sm:inline"><%= Current.user.name %></span>
+          <%= button_to t("admin.nav.logout"), session_path, method: :delete,
+                class: "min-h-10 cursor-pointer rounded-full border border-white/50 px-4 font-semibold" %>
+        </div>
+      </div>
+      <nav class="border-t border-white/15">
+        <div class="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-2 pt-1 text-sm font-semibold">
+          <%= admin_nav_link t("admin.nav.dashboard"), admin_root_path %>
+          <% if Current.user.hq_admin? %>
+            <%= admin_nav_link t("admin.nav.staff"), admin_users_path %>
+          <% end %>
+          <%= link_to t("admin.nav.view_site"), root_path, target: "_blank",
+                class: "inline-flex min-h-11 items-center whitespace-nowrap px-3 text-white/90 hover:text-white" %>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mx-auto max-w-6xl px-4 pt-4">
+      <% if alert %><p class="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700"><%= alert %></p><% end %>
+      <% if notice %><p class="rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700"><%= notice %></p><% end %>
+    </div>
+
+    <main class="mx-auto max-w-6xl px-4 py-6">
+      <%= yield %>
+    </main>
+  </body>
+</html>
